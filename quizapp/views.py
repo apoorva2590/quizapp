@@ -12,6 +12,7 @@ def index(request):
     return render(request, "quizapp/index.html", {'questions_list':questions_list})
 
 def detail(request, question_id):
+    #Added comment
     message = ""
     is_correct = False
     if request.method == "POST":
@@ -42,5 +43,7 @@ def login(request):
             message = "Either username or password is wrong"
         else:
             #message = "Login successful"
-            return redirect('index')
+            return r
+            
+            edirect('index')
     return render(request,"quizapp/login.html",{'message': message})
